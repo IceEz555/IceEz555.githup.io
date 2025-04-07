@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Arimo", sans-serif;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 700px;
+    max-width: 100%;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.headbox{
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.from{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.input{
+    padding: 10px;
+    h3{
+        padding-bottom: 5px;
+    }
+    input{
+        width: 250px;
+        height: 25px;
+        border-radius: 10px;
+        padding: 15px;
+    }
+}
+.button{
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    button{
+        width: 200px;
+        height: 35px;
+        background-color: #111112;
+        border-radius: 12px;
+        color: white;
+        }
+}
+
+.box2{
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.progress{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(black 0% 65%, #eee 65% 100%);
+    position: relative;
+}
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+}
+.check {
+    width: 250px;
+    height: 200px;
+    color: #111111;
+    background-color: #e5e5e5;
+    border-radius: 15px;
+    padding:10px;
+    p{
+        padding: 8px;
+    }
+}
