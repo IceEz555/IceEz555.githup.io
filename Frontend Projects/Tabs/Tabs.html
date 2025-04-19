@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <ul class="tab">
+            <li>
+                <a class="active" id="fi" href="#">First Tab</a>
+            </li>
+            <li>
+                <a class="" id="se" href="#">Second Tab</a>
+            </li>
+            <li>
+                <a class="" id="th" href="#">Third Tab</a>
+            </li>
+            <li>
+                <a class="" id="fo" href="#">Fourth Tab</a>
+            </li>
+        </ul>
+        <p> Click each tab should hide the content of the other tab and show the
+            content of clicked tab. By default, enable the first tab.
+        </p>
+
+        <div class="content">
+            <div class="con-active" id="fi-t">
+                <p> First Tab content to be displayed here.</p>
+            </div>
+            <div class="con" id="se-t">
+                <p> Second Tab content to be displayed here.</p>
+            </div>
+            <div class="con" id="th-t">
+                <p> Third Tab content to be displayed here.</p>
+            </div>
+            <div class="con" id="fo-t">
+                <p> Fourth Tab content to be displayed here.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    const list = document.querySelectorAll('.tab a');
+    const contents = document.querySelectorAll('.content div');
+
+    list.forEach(tab => {
+        tab.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // 🔸 1. ลบคลาส 'active' ออกจากแท็บทั้งหมด
+            list.forEach(t => t.classList.remove("active"));
+
+            // 🔸 2. เพิ่มคลาส 'active' ให้แท็บที่คลิก
+            tab.classList.add("active");
+
+            // 🔸 3. ซ่อนเนื้อหาทั้งหมด
+            contents.forEach(c => {
+                c.classList.remove("con-active");
+                c.classList.add("con"); // ซ่อนด้วยการคืน class con กลับไป
+            });
+
+            // 🔸 4. แสดงเฉพาะเนื้อหาที่ตรงกับ id ของแท็บ
+            const target = tab.id;
+            const targetContent = document.querySelector(`#${target}-t`);
+            if (targetContent) {
+                targetContent.classList.remove("con"); // เอา display: none ออก
+                targetContent.classList.add("con-active"); // ใส่ display: block
+            }
+        });
+    });
+
+</script>
