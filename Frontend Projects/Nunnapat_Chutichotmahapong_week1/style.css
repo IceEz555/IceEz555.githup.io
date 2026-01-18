@@ -1,0 +1,384 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif; 
+    /* Pink Background Request */
+    background-color: #ffe6f2;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    color: #666666; 
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Main Container */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 850px;
+    padding: 50px 60px;
+    border-radius: 25px;
+    box-shadow: 0 8px 40px rgba(220, 180, 220, 0.2);
+    border: 1px solid #f5f0f5;
+    position: relative; /* Added for absolute logo positioning */
+}
+
+/* Header */
+header {
+    text-align: center; 
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 3.5rem; 
+    color: #e89bb8;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #d4a5c9;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.header-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #f0d0e0, transparent);
+    margin-top: 25px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Left Column */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Profile Image */
+.profile-img-box {
+    width: 100%;
+    aspect-ratio: 1 / 1.2;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #f5d5e8;
+}
+
+.profile-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Column */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Content Blocks */
+.content-block {
+    padding: 20px 25px;
+    border-radius: 15px;
+}
+
+.content-block h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.content-block p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Highlight Text */
+.highlight-text {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Bullet List */
+.bullet-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.bullet-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #d4a5c9;
+    font-size: 1.1rem;
+}
+
+/* Individual Box Styles */
+
+/* Languages Box */
+.languages-box {
+    background-color: #fdfcfd;
+    border: 1px solid #f0e8f0;
+}
+
+.languages-box h2 {
+    color: #c9a0c0;
+}
+
+/* Hobbies Box */
+.hobbies-box {
+    background: linear-gradient(135deg, #fdf0f5 0%, #fff8fa 100%);
+    border-left: 4px solid #f0b8d0;
+}
+
+.hobbies-box h2 {
+    color: #e07090;
+}
+
+/* Knowledgeable In Box */
+.knowledge-box {
+    background-color: #fdfcfd;
+    border: 2px solid #f5d5e8;
+    padding: 20px 25px;
+}
+
+.knowledge-box h2 {
+    color: #d4a5c9;
+}
+
+/* About Box */
+.about-box {
+    background-color: #fdfcfd;
+    border: 1px solid #f0e8f0;
+}
+
+.about-box h2 {
+    color: #c9a0c0;
+}
+
+/* Dream Box */
+.dream-box {
+    background-color: #fdfcfd;
+    border: 1px solid #f0e8f0;
+}
+
+.dream-box h2 {
+    color: #d090a8;
+}
+
+/* Career Box */
+.career-box {
+    background: linear-gradient(135deg, #fdf5f8 0%, #fff8fa 100%);
+    border-left: 4px solid #f0b8d0;
+}
+
+.career-box h2 {
+    color: #e89bb8;
+}
+
+/* Favorite Way to Relax Box */
+.relax-box {
+    background: linear-gradient(135deg, #f8f5ff 0%, #fffbfd 100%);
+    border: 1px solid #f0e8f5;
+}
+
+.relax-box h2 {
+    background: linear-gradient(90deg, #e8a0c8, #c8a0e0, #a8c0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #f5f0f5;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #c0b0c0;
+    font-weight: 500;
+}
+
+/* ========== Part B Requirements ========== */
+
+/* 4) Fixed Position - Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #f0a0c0, #d090b0);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(220, 140, 180, 0.4);
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, #e890b0, #c080a0);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(220, 140, 180, 0.5);
+}
+
+/* 5) :has() Selector */
+.content-block:has(.bullet-list) {
+    border-left: 3px solid #e8b0d0;
+}
+
+.content-block:has(.highlight-text) {
+    box-shadow: 0 2px 10px rgba(220, 180, 220, 0.15);
+}
+
+/* ============ Week 2 ============ */
+
+/* Clickable Logo - Absolute Position (Inside Container) */
+.logo {
+    position: absolute; /* Relative to .container */
+    top: 30px;
+    left: 40px;
+    font-family: 'Pacifico', cursive; /* More readable cursive font */
+    font-size: 2.2rem;
+    font-weight: 400; /* Pacifico is bold by default */
+    color: #ff69b4;
+    text-decoration: none;
+    transform: rotate(-5deg);
+    transition: transform 0.3s;
+    z-index: 10;
+    letter-spacing: 1px; /* Improved readability */
+}
+
+.logo:hover {
+    transform: rotate(0deg) scale(1.1);
+    color: #ff1493;
+}
+
+/* Ensure Logo behaves well on mobile */
+@media (max-width: 600px) {
+    .logo {
+        position: static; /* Stack on top for mobile */
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        transform: none;
+    }
+    
+    header {
+        margin-top: 10px; /* Reduced mt since logo is static */
+    }
+}
+
+/* Mission Box */
+.mission-box {
+    background-color: #fff0f5; /* Light pink background */
+    border: 1px solid #f0e8f0;
+    padding: 20px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px; /* Space before grid */
+    text-align: center;
+}
+
+.mission-box h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    color: #ff69b4;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.mission-text {
+    font-style: italic;
+    color: #666;
+}
+
+/* Gallery Section */
+.gallery-section {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: #e89bb8;
+    margin-bottom: 20px;
+}
+
+/* Grid for 4 images */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px; /* Increased from 150px */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 on mobile */
+    }
+}
+
+/* Audio Player */
+.audio-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 15px;
+    text-align: center;
+}
