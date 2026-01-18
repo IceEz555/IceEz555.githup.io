@@ -1,0 +1,454 @@
+:root {
+  --primary-blue: #1a54e6;
+  --accent-green: #e5ff9c;
+  --accent-orange: #ff7e5f;
+  --bg-color: #f4f4f6;
+  --text-dark: #333;
+  --text-gray: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  background-image: url('https://img.freepik.com/free-photo/white-crumpled-paper-texture-background_1373-162.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-dark);
+  line-height: 1.6;
+  padding: 20px;
+  overflow-x: hidden; /* Prevent horizontal scroll from rotated elements */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+/* --- Header / Title Section --- */
+.header-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 60px;
+  padding-top: 60px;
+}
+
+.main-title {
+  font-family: "Titan One", cursive;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  color: var(--primary-blue);
+  line-height: 0.85;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+/* Decorative elements */
+.star-deco {
+  position: absolute;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.star-2 {
+  top: 40px;
+  right: 20%;
+  color: #7aaaff;
+  font-size: 1.8rem;
+  transform: rotate(45deg);
+}
+
+/* --- Intro Section --- */
+/* --- Intro Section --- */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr; /* More space for gallery */
+  gap: 20px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+/* ... (media query remains) ... */
+
+/* ... */
+
+.intro-gallery-row {
+  display: flex;
+  gap: 10px; /* Reduced gap */
+  justify-content: center;
+  flex-wrap: nowrap; /* Force horizontal */
+}
+
+.sketch-photo {
+  background: white;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transform: rotate(-2deg);
+  transition: transform 0.3s;
+  width: 180px; /* Slightly smaller to fit 3 side-by-side */
+  flex-shrink: 0; /* Prevent squishing too much */
+}
+
+.sketch-photo:nth-child(2) {
+  transform: rotate(3deg);
+  z-index: 1;
+}
+
+.sketch-photo:nth-child(3) {
+  transform: rotate(-4deg);
+}
+
+.sketch-photo:hover {
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.sketch-photo img {
+  width: 100%;
+  height: 180px; /* Matching width */
+  object-fit: cover;
+  display: block;
+  border: 1px solid #eee;
+}
+
+.intro-profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.intro-right-col {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hello-wrapper {
+  position: relative;
+}
+
+.hello-text {
+  font-family: "Caveat", cursive;
+  font-size: 4rem;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+  transform: rotate(-4deg);
+  display: inline-block;
+  line-height: 1;
+}
+
+.intro-box {
+  background: white;
+  padding: 30px;
+  border-left: 6px solid var(--accent-orange);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 0 10px 10px 0;
+  font-size: 1.1rem;
+}
+
+.profile-card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: rotate(2deg);
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 4px;
+}
+
+/* Tape effect */
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 10px auto 20px;
+  border-radius: 50%;
+  border: 4px solid var(--bg-color);
+  display: block;
+}
+
+.location-tag {
+  background: #f4f4f6;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 600;
+}
+
+/* --- Main Content Grid --- */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.section-header {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title {
+  color: var(--primary-blue);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--accent-green);
+  z-index: -1;
+  transform: skewX(-20deg);
+}
+
+.item {
+  margin-bottom: 40px;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.item-label {
+  color: var(--accent-orange);
+  font-family: "Caveat", cursive;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.item-sublabel {
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.item-title {
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.item-desc {
+  color: var(--text-gray);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* --- Hobbies --- */
+.hobbies-wrapper {
+  background: white;
+  border: 2px solid var(--text-dark);
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 8px 8px 0px var(--text-dark);
+}
+
+.hobbies-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hobby-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.hobby-icon-box {
+  width: 50px;
+  height: 50px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  border: 2px solid var(--text-dark);
+}
+
+/* --- Requirement: Challenge :has() --- */
+.hobbies-wrapper:has(.hobby-item:hover) {
+  border-color: var(--primary-blue);
+  background-color: #f9f9ff;
+  box-shadow: 12px 12px 0px var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+/* --- Language List (Small addition) --- */
+.language-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--text-gray);
+}
+
+.language-list li {
+  margin-bottom: 4px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.language-list li::before {
+  content: "•";
+  color: var(--accent-orange);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* --- Week 2 Additions --- */
+
+/* Clickable Logo */
+.nav-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  color: #f1c40f; /* Dark Yellow */
+  text-decoration: none;
+  z-index: 100;
+  transform: rotate(-5deg);
+  transition: transform 0.3s;
+}
+
+.nav-logo:hover {
+  transform: rotate(0deg) scale(1.1);
+}
+
+/* Mission Section */
+.mission-section {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 30px;
+  background: #fff;
+  border-top: 4px solid var(--accent-orange);
+  border-bottom: 4px solid var(--accent-orange);
+  transform: rotate(-1deg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.mission-section h2 {
+  font-family: "Titan One", cursive;
+  color: var(--accent-orange);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.mission-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Gallery Section */
+.gallery-section {
+  margin-bottom: 60px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+
+/* --- Intro Gallery (Sketch Style) --- */
+.intro-gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Already updated via previous block, but ensuring consistency for other selectors if needed */
+.audio-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  backdrop-filter: blur(5px);
+}
+
