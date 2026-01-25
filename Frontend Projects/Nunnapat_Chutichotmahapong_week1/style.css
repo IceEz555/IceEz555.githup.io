@@ -383,3 +383,56 @@ footer p {
     border-radius: 15px;
     text-align: center;
 }
+
+/* Favorite Songs Table  Week 3*/
+.songs-box {
+    background-color: #fff;
+    border: 1px solid #ffccdd; 
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px; 
+}
+
+.songs-box h2 {
+    color: #e89bb8; 
+    margin-bottom: 20px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.songs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.songs-table th, .songs-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ffe6f2; 
+}
+
+.songs-table th {
+    background-color: #ffe6f2; 
+    color: #d45d9e; 
+    font-weight: bold;
+}
+
+.songs-table td {
+    color: #666;
+}
+
+.songs-table .even {
+    background-color: #fff9fc; 
+}
+
+.album-cover {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px; 
+}
+
+
