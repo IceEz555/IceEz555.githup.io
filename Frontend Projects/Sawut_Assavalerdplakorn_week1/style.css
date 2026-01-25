@@ -1,3 +1,4 @@
+/* === ORIGINAL CODE (Week 1) === */
 :root {
   --primary-blue: #1a54e6;
   --accent-green: #e5ff9c;
@@ -66,7 +67,6 @@ body {
   transform: rotate(45deg);
 }
 
-/* --- Intro Section --- */
 /* --- Intro Section --- */
 .intro-grid {
   display: grid;
@@ -364,9 +364,9 @@ body {
   left: 0;
 }
 
-/* --- Week 2 Additions --- */
+/* === (Week 2) === */
 
-/* Clickable Logo */
+/* Logo */
 .nav-logo {
   position: absolute;
   top: 20px;
@@ -451,4 +451,73 @@ body {
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   backdrop-filter: blur(5px);
 }
+
+/* Week 3 */
+.movie-section {
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 60px;
+}
+
+.handwritten-title {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    color: #1a54e6;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+/* Container table */
+.table-container {
+    width: 90%; 
+    max-width: 900px; 
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+    border: 1px solid #ddd;
+    overflow-x: auto; /* Enable horizontal scroll */
+}
+
+.movie-table {
+    width: 100%; 
+    border-collapse: collapse;
+    background-color: white;
+    min-width: 600px; 
+}
+
+.movie-table th {
+    background-color: #1a54e6;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 25%;
+}
+
+.movie-table td {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: left;
+    color: #444;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+/* Alternate row color */
+.movie-table .even {
+    background-color: #f9f9f9;
+}
+
+.movie-poster {
+    width: 60px;
+    height: 90px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 
