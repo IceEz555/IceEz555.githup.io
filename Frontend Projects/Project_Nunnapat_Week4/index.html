@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Archive by grxcy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="navbar container">
+            <h2 class="navbar-brand">Style Archive by grxcy</h2>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="street_looks.html">Street Looks</a></li>
+                <li><a href="going_looks.html">Going Looks</a></li>
+                <li><a href="#">Summer Looks</a></li>
+                <li><a href="#">Y2k looks</a></li>
+                <li><a href="#">Stockholm looks</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Hero Section -->
+        <h3 class="text-center" style="margin-top: 40px; color: var(--primary-red); font-family: var(--font-heading); font-size: 2rem;">"Find style inspo and shop the look!"</h3>
+
+        <!-- Section 1: Top 3 Cards -->
+        <div class="collection-grid">
+            <!-- Card 1 -->
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Project_1.jpg" alt="Street Looks">
+                </div>
+                <div class="card-title">Street Looks</div>
+                <a href="street_looks.html" class="btn-explore">Explore</a>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Project_2.jpg" alt="Going Out Looks">
+                </div>
+                <div class="card-title">GoingOut Looks</div>
+                <a href="going_looks.html" class="btn-explore">Explore</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Project_3.jpg" alt="Summer Looks">
+                </div>
+                <div class="card-title">Summer Looks</div>
+                <a href="#" class="btn-explore">Explore</a>
+            </div>
+        </div>
+
+        <!-- Section 2: Bottom 2 Cards -->
+        <div class="collection-grid-2">
+            <!-- Card 4 -->
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Project_4.jpg" alt="Y2k Looks">
+                </div>
+                <div class="card-title">Y2k Looks</div>
+                <a href="#" class="btn-explore">Explore</a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Project_5.jpg" alt="Stockholm Looks">
+                </div>
+                <div class="card-title">Stockholm looks</div>
+                <a href="#" class="btn-explore">Explore</a>
+            </div>
+        </div>
+
+        <!-- Statement Pieces Table -->
+        <h2 class="section-title-left">Statement Pieces</h2>
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Statement Pieces</th>
+                    <th style="width: 30%;">What it Changes</th>
+                    <th style="width: 25%;">Best For</th>
+                    <th style="width: 25%;">Work With</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Baseball Cap</td>
+                    <td>Creates a relaxed, effortless street vibe</td>
+                    <td>Casual,street styling</td>
+                    <td>Street, Y2k</td>
+                </tr>
+                <tr>
+                    <td>Faux Fur Jacket</td>
+                    <td>Instantly elevates a simple outfit into a bold statement</td>
+                    <td>Elevate the outfits</td>
+                    <td>Going out, Street,Y2k</td>
+                </tr>
+                <tr>
+                    <td>Knee High Boots</td>
+                    <td>Adds structure and drama to an outfit</td>
+                    <td>Dressy,edgy looks</td>
+                    <td>Going out,Y2k</td>
+                </tr>
+                <tr>
+                    <td>Statement Sunglasses</td>
+                    <td>Adds attitude and a fashion forward edge</td>
+                    <td>Everyday styling</td>
+                    <td>All looks</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- JavaScript for Hamburger -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* CSS Variables & Design System */
+:root {
+    --bg-cream: #F5F1EB;
+    --primary-red: #8B1D18;
+    --text-brown: #2C1608;
+    --accent-pink: #C17C74;
+    --white: #ffffff;
+    
+    --font-heading: 'Great Vibes', cursive;
+    --font-body: 'Vollkorn', serif;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-brown);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-red);
+    font-weight: 400;
+}
+
+h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 0.5rem; 
+    text-align: center; 
+    margin-top: 20px;
+    transform: rotate(-3deg); /* Added tilt effect */
+    display: inline-block; /* Required for transform to work nicely on text blocks sometimes, though block works too */
+    width: 100%;
+}
+h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
+h3 { font-size: 1.8rem; }
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center { text-align: center; }
+
+/* Navbar */
+header {
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--primary-red); /* Hand-drawn feel */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    font-family: var(--font-body); /* Nav text should be readable */
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-red);
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--text-brown);
+    text-decoration: underline;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+/* Grids & Cards */
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.collection-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.style-card {
+    border: 2px solid var(--text-brown);
+    padding: 15px;
+    background: var(--white);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.style-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 0px rgba(139, 29, 24, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #eee;
+    margin-bottom: 15px;
+    border: 2px solid var(--text-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-family: var(--font-body); /* Card text in drawings looks sans/serif mix, stick to body for readability */
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.btn-explore {
+    display: inline-block;
+    background-color: var(--accent-pink);
+    color: var(--text-brown);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid var(--text-brown);
+    transition: background 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: var(--primary-red);
+    color: var(--white);
+}
+
+/* Tables */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    border: 2px solid var(--text-brown);
+    background: var(--white);
+}
+
+.custom-table th {
+    background-color: var(--accent-pink);
+    color: var(--text-brown);
+    padding: 15px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    border: 1px solid var(--text-brown);
+}
+
+.custom-table td {
+    padding: 15px;
+    border: 1px solid var(--text-brown);
+    font-family: var(--font-body); /* Changed to body font for readability */
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Checklist Style */
+.checklist {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.checklist li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checklist li::before {
+    content: '✓';
+    color: var(--primary-red);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        right: 0;
+        background-color: var(--bg-cream);
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 2px solid var(--primary-red);
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .collection-grid, .collection-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 { font-size: 2.5rem; }
+}
+
+/* Refactoring Utilities */
+.navbar-brand {
+    margin: 0;
+}
+
+.page-heading-left {
+    color: var(--primary-red);
+    margin-top: 40px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.section-title-left {
+    margin-top: 35px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.section-title-right {
+    margin-top: 30px; /* Adjusted to match recent changes */
+    text-align: right;
+    padding-right: 20px;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.checklist {
+    padding-left: 40px; /* Moved from inline */
+}

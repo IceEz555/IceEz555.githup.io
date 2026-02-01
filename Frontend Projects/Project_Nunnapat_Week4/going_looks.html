@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goingout Looks - Style Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="navbar container">
+            <h2 class="navbar-brand">Style Archive by grxcy</h2>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="street_looks.html">Street Looks</a></li>
+                <li><a href="going_looks.html" class="active">Going Looks</a></li>
+                <li><a href="#">Summer Looks</a></li>
+                <li><a href="#">Y2k looks</a></li>
+                <li><a href="#">Stockholm looks</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Page Title -->
+        <h1 class="page-heading-left">Goingout Looks</h1>
+
+        <!-- Photo Gallery (3 Photos) -->
+        <div class="collection-grid">
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Page3_11.jpg" alt="Going Look 1">
+                </div>
+                <div class="card-title">Photo 11</div>
+            </div>
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Page3_12.jpg" alt="Going Look 2">
+                </div>
+                <div class="card-title">Photo 12</div>
+            </div>
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Page3_13.jpg" alt="Going Look 3">
+                </div>
+                <div class="card-title">Photo 13</div>
+            </div>
+        </div>
+
+        <!-- Style Checklist -->
+        <h2 class="section-title-left">Style Checklist</h2>
+        <ul class="checklist">
+            <li>Corset Top</li>
+            <li>Faux Fur Jacket</li>
+            <li>Mini Dress</li>
+            <li>Knee high Boots</li>
+            <li>Heels</li>
+        </ul>
+
+        <!-- Where to Shop Table -->
+        <h2 class="section-title-right">Where to shop !</h2>
+        
+        <!-- Layout for Table + Image (Grid) -->
+        <div class="shop-grid">
+            <!-- Left: Feature Image -->
+            <div class="style-card full-height">
+                <div class="card-image full-height" style="margin:0;">
+                    <img src="https://grace270198.neocities.org/Image/Page3_14.jpg" alt="Feature Look">
+                </div>
+            </div>
+
+            <!-- Right: Table -->
+            <table class="custom-table" style="margin-top: 0;">
+                <thead>
+                    <tr>
+                        <th style="background-color: var(--accent-pink);">Category</th>
+                        <th style="background-color: var(--accent-pink);">Store</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dresses</td>
+                        <td>Princess polly,Edikted,Windsor,Zara</td>
+                    </tr>
+                    <tr>
+                        <td>Tops</td>
+                        <td>Amazon,Edikted,Princess polly</td>
+                    </tr>
+                    <tr>
+                        <td>Shoes</td>
+                        <td>Amazon,Steve Madden</td>
+                    </tr>
+                    <tr>
+                        <td>Outer Wear</td>
+                        <td>Zara,Amazon</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Hamburger -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

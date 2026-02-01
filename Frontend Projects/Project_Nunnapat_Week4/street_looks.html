@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Looks - Style Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="navbar container">
+            <h2 class="navbar-brand">Style Archive by grxcy</h2>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="street_looks.html" class="active">Street Looks</a></li>
+                <li><a href="going_looks.html">Going Looks</a></li>
+                <li><a href="#">Summer Looks</a></li>
+                <li><a href="#">Y2k looks</a></li>
+                <li><a href="#">Stockholm looks</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Page Title -->
+        <h1 class="page-heading-left">Street Looks</h1>
+
+        <!-- Photo Gallery (3 Photos) -->
+        <div class="collection-grid">
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Page2_6.jpg" alt="Street Look 1">
+                </div>
+                <div class="card-title">Photo 6</div>
+            </div>
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Page2_7.jpg" alt="Street Look 2">
+                </div>
+                <div class="card-title">Photo 7</div>
+            </div>
+            <div class="style-card">
+                <div class="card-image">
+                    <img src="https://grace270198.neocities.org/Image/Page2_8.jpg" alt="Street Look 3">
+                </div>
+                <div class="card-title">Photo 8</div>
+            </div>
+        </div>
+
+        <!-- Style Checklist -->
+        <h2 class="section-title-left">Style Checklist</h2>
+        <ul class="checklist">
+            <li>Oversized graphic tee</li>
+            <li>Baggy cargo pants</li>
+            <li> Chunky sneakers (New Balance/Nike)</li>
+            <li>Crossbody bag</li>
+            <li>Beanie or cap</li>
+        </ul>
+
+        <!-- Where to Shop Table -->
+        <h2 class="section-title-right">Where to shop !</h2>
+        
+        <!-- Layout for Table + Image (Grid) -->
+        <div class="shop-grid">
+            <!-- Left: Feature Image -->
+            <div class="style-card full-height">
+                <div class="card-image full-height" style="margin:0;">
+                    <img src="https://grace270198.neocities.org/Image/Page2_10.jpg" alt="Feature Look">
+                </div>
+            </div>
+
+            <!-- Right: Table -->
+            <table class="custom-table" style="margin-top: 0;">
+                <thead>
+                    <tr>
+                        <th style="background-color: var(--accent-pink);">Category</th>
+                        <th style="background-color: var(--accent-pink);">Store</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basics&Tops</td>
+                        <td>Brandy Melville, Aritzia,H&M</td>
+                    </tr>
+                    <tr>
+                        <td>Pants&Denim</td>
+                        <td>Pacsun,Garage,Revice Denim</td>
+                    </tr>
+                    <tr>
+                        <td>Outerwear</td>
+                        <td>Urban Outfitters,Zara,Pacsun</td>
+                    </tr>
+                    <tr>
+                        <td>Shoes</td>
+                        <td>Dr Martens, Nike</td>
+                    </tr>
+                    <tr>
+                        <td>Accessories</td>
+                        <td>Amazon,Pacsun</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Hamburger -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
