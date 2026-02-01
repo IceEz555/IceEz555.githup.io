@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal Fanpage Website | History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <h1 class="site-title">Arsenal Fanpage website</h1>
+            <div class="logo-box">
+                <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal Logo">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="team.html">Current Team</a></li>
+                <li><a href="#">Fixtures</a></li>
+                <li><a href="#">Achievement</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Page Title & Text -->
+        <h2 class="page-title">History</h2>
+        <p style="text-align: left; font-size: 1.1rem; margin-bottom: 30px; font-family: 'Montserrat';">
+            Arsenal Football Club has a rich history dating back to 1886. From the early days at Highbury to the modern era at the Emirates Stadium, the club has always been at the forefront of English football.
+            Known for their attacking style of play and tradition of developing young talent.
+        </p>
+
+        <!-- Wireframe Grid Layout (Mixed) -->
+        <div class="history-grid-mix">
+            <!-- Top Row: 2 Boxes -->
+            <div class="wireframe-box h-box-large">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Highbury_stadium.jpg/800px-Highbury_stadium.jpg" alt="Highbury">
+                <h3>Highbury</h3>
+            </div>
+            <div class="wireframe-box h-box-large">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Emirates_Stadium_East_Stand.jpg/800px-Emirates_Stadium_East_Stand.jpg" alt="Emirates">
+                <h3>Emirates</h3>
+            </div>
+            
+            <!-- Bottom Row: 1 Vert, 1 Wide -->
+            <div class="wireframe-box h-box-vert" style="height: 300px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Arsene_Wenger_2015.jpg/506px-Arsene_Wenger_2015.jpg" alt="Wenger">
+                <h3>The Boss</h3>
+            </div>
+            <div class="wireframe-box" style="height: 300px; display: block; overflow: hidden; padding: 0;">
+                <!-- Table inside a box -->
+                <div style="width: 100%; height: 100%; overflow-y: auto; padding: 15px;">
+                    <h4 style="text-align:center; margin-bottom:15px; color: var(--arsenal-red); font-family: 'Bebas Neue'; font-size: 1.8rem;">Achievements</h4>
+                    <table>
+                        <tr>
+                            <th>Cup</th>
+                            <th>Wins</th>
+                        </tr>
+                        <tr>
+                            <td>Premier League</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>FA Cup</td>
+                            <td>14 (Record)</td>
+                        </tr>
+                        <tr>
+                            <td>League Cup</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal Fanpage Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Wireframe-style Header (Simple) -->
+    <header>
+        <div class="header-top">
+            <h1 class="site-title">Arsenal Fanpage website</h1>
+            <!-- Logo now simply next to text -->
+            <div class="logo-box">
+                <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal Logo">
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="team.html">Current Team</a></li>
+                <li><a href="#">Fixtures</a></li>
+                <li><a href="#">Achievement</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <!-- Introduction Section -->
+        <h2 class="page-title">Introduction</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+            Welcome to the ultimate Arsenal fanpage. This website is dedicated to the history, players, and achievements of Arsenal Football Club. 
+            Victoria Concordia Crescit - Victory Through Harmony. Explore the glorious past and the exciting present of the Gunners.
+        </p>
+
+        <!-- 2x2 Grid Wireframe with Images -->
+        <div class="wireframe-grid">
+            <div class="wireframe-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Emirates_Stadium_2009.jpg/800px-Emirates_Stadium_2009.jpg" alt="Emirates Stadium">
+                <h3>Stadium</h3>
+            </div>
+            <div class="wireframe-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Arsenal_FC_Parade.jpg/800px-Arsenal_FC_Parade.jpg" alt="Arsenal Fans">
+                <h3>Fans</h3>
+            </div>
+            <div class="wireframe-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Premier_League_Trophy.jpg/365px-Premier_League_Trophy.jpg" alt="Trophy">
+                <h3>Trophy</h3>
+            </div>
+            <div class="wireframe-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Thierry_Henry_New_York_Red_Bulls_2012.jpg/800px-Thierry_Henry_New_York_Red_Bulls_2012.jpg" alt="Legend">
+                <h3>Legend</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+</html>
