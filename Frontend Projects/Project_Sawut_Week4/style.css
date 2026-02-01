@@ -245,7 +245,6 @@ header {
 }
 
 
-
 .player-box:hover {
     transform: scale(1.05);
     /* background-color: var(--arsenal-red); <-- Removed to keep white/red split on hover */
@@ -374,7 +373,10 @@ tr:hover {
     .wireframe-box {
         height: 200px;
     }
-    
+    .history-grid-mix {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
     .player-row {
         grid-template-columns: 1fr;
     }
