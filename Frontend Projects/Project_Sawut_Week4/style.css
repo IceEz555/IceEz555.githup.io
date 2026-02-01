@@ -212,28 +212,39 @@ header {
 .player-box {
     background: white;
     border-radius: 8px;
-    height: 120px;
+    height: 300px; /* Increased height for full card */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* border-left: 4px solid var(--arsenal-red); <-- Removed vertical line */
+    flex-direction: column; /* Stack image and name */
+    overflow: hidden; /* Keep image inside border radius */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    position: relative; /* Ensure h3 positioning works */
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.player-box img {
+    width: 100%;
+    height: 85%; /* Image takes most space */
+    object-fit: cover;
+    object-position: top;
 }
 
 .player-box h3 {
-    background: var(--arsenal-red); /* Solid red */
-    padding: 8px 0;
-    height: 40%; /* Make it occupy bottom portion */
+    background: var(--arsenal-red);
+    color: white;
+    width: 100%;
+    height: 15%; /* Bottom bar */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem; /* Adjust font size */
+    font-family: 'Bebas Neue';
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
+
+
 
 .player-box:hover {
     transform: scale(1.05);
