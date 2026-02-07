@@ -3,138 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style Archive by grxcy</title>
+    <title>Fashion Week - Home</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            /* Fallback and Gradient overlap */
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/banner/banner.jpg') no-repeat center center/cover;
+        }
+
+        /* New 4-Column Minimal Design - Specific to Home */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .minimal-card {
+            background: transparent;
+            box-shadow: none;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .minimal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .minimal-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+
+        .minimal-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .minimal-card p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            padding: 0 10px;
+        }
+        
+        .minimal-card:hover .learn-more {
+            border-bottom: 1px solid #8b5a2b;
+        }
+
+        @media (max-width: 768px) {
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header>
-        <div class="navbar container">
-            <h2 class="navbar-brand">Style Archive by grxcy</h2>
-            
-            <div class="hamburger" id="hamburger">
+        <a href="index.html" class="logo">FASHION WEEK</a>
+        <nav>
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="street_looks.html">Street Looks</a></li>
-                <li><a href="going_looks.html">Going Looks</a></li>
-                <li><a href="#">Summer Looks</a></li>
-                <li><a href="#">Y2k looks</a></li>
-                <li><a href="#">Stockholm looks</a></li>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="history.html" class="nav-link">History</a></li>
+                <li class="nav-item"><a href="locations.html" class="nav-link">Locations</a></li>
+                <li class="nav-item"><a href="brands.html" class="nav-link">Brands</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
+    <section class="hero">
+        <h1>Fashion Week</h1>
+        <p>Discover the history, highlights, and key brands of the world's most glamorous fashion events.</p>
+        <button class="btn" onclick="window.location.href='about.html'">Explore More</button>
+    </section>
+
+    <!-- Content Preview Section -->
     <div class="container">
-        
-        <!-- Hero Section -->
-        <h3 class="text-center" style="margin-top: 40px; color: var(--primary-red); font-family: var(--font-heading); font-size: 2rem;">"Find style inspo and shop the look!"</h3>
-
-        <!-- Section 1: Top 3 Cards -->
-        <div class="collection-grid">
-            <!-- Card 1 -->
-            <div class="style-card">
-                <div class="card-image">
-                    <img src="https://grace270198.neocities.org/Image/Project_1.jpg" alt="Street Looks">
-                </div>
-                <div class="card-title">Street Looks</div>
-                <a href="street_looks.html" class="btn-explore">Explore</a>
-            </div>
+        <!-- New 4-Column Layout based on user preference -->
+        <div class="grid-4">
             
-            <!-- Card 2 -->
-            <div class="style-card">
-                <div class="card-image">
-                    <img src="https://grace270198.neocities.org/Image/Project_2.jpg" alt="Going Out Looks">
-                </div>
-                <div class="card-title">GoingOut Looks</div>
-                <a href="going_looks.html" class="btn-explore">Explore</a>
+            <!-- Item 2: Explore (About) -->
+            <div class="minimal-card" onclick="window.location.href='about.html'">
+                <img src="img/home/What is Fashion Week.jpg" alt="Explore">
+                <h3>What is Fashion Week?</h3>
+                <p>Get to know the power of Fashion Week</p>
+                <span class="learn-more">Explore &gt;</span>
             </div>
 
-            <!-- Card 3 -->
-            <div class="style-card">
-                <div class="card-image">
-                    <img src="https://grace270198.neocities.org/Image/Project_3.jpg" alt="Summer Looks">
-                </div>
-                <div class="card-title">Summer Looks</div>
-                <a href="#" class="btn-explore">Explore</a>
+            <!-- Item 1: History -->
+            <div class="minimal-card" onclick="window.location.href='history.html'">
+                <img src="img/home/History.jpg" alt="History">
+                <h3>History</h3>
+                <p>Trace the origins and evolution of Fashion Week</p>
+                <span class="learn-more">Explore &gt;</span>
             </div>
+
+            <!-- Item 3: Locations -->
+            <div class="minimal-card" onclick="window.location.href='locations.html'">
+                <img src="img/home/Explore Fashion Week.jpg" alt="Locations">
+                <h3>Explore Fashion Week</h3>
+                <p>Learn about the key fashion capitals that set the trends around the world.</p>
+                <span class="learn-more">Explore &gt;</span>
+            </div>
+
+            <!-- Item 4: Brands -->
+            <div class="minimal-card" onclick="window.location.href='brands.html'">
+                <img src="img/home/Brands.jpg" alt="Brands">
+                <h3>Brands</h3>
+                <p>See the most legendary designers and iconic runway moments.</p>
+                <span class="learn-more">Explore &gt;</span>
+            </div>
+
         </div>
-
-        <!-- Section 2: Bottom 2 Cards -->
-        <div class="collection-grid-2">
-            <!-- Card 4 -->
-            <div class="style-card">
-                <div class="card-image">
-                    <img src="https://grace270198.neocities.org/Image/Project_4.jpg" alt="Y2k Looks">
-                </div>
-                <div class="card-title">Y2k Looks</div>
-                <a href="#" class="btn-explore">Explore</a>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="style-card">
-                <div class="card-image">
-                    <img src="https://grace270198.neocities.org/Image/Project_5.jpg" alt="Stockholm Looks">
-                </div>
-                <div class="card-title">Stockholm looks</div>
-                <a href="#" class="btn-explore">Explore</a>
-            </div>
-        </div>
-
-        <!-- Statement Pieces Table -->
-        <h2 class="section-title-left">Statement Pieces</h2>
-        <table class="custom-table">
-            <thead>
-                <tr>
-                    <th style="width: 20%;">Statement Pieces</th>
-                    <th style="width: 30%;">What it Changes</th>
-                    <th style="width: 25%;">Best For</th>
-                    <th style="width: 25%;">Work With</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Baseball Cap</td>
-                    <td>Creates a relaxed, effortless street vibe</td>
-                    <td>Casual,street styling</td>
-                    <td>Street, Y2k</td>
-                </tr>
-                <tr>
-                    <td>Faux Fur Jacket</td>
-                    <td>Instantly elevates a simple outfit into a bold statement</td>
-                    <td>Elevate the outfits</td>
-                    <td>Going out, Street,Y2k</td>
-                </tr>
-                <tr>
-                    <td>Knee High Boots</td>
-                    <td>Adds structure and drama to an outfit</td>
-                    <td>Dressy,edgy looks</td>
-                    <td>Going out,Y2k</td>
-                </tr>
-                <tr>
-                    <td>Statement Sunglasses</td>
-                    <td>Adds attitude and a fashion forward edge</td>
-                    <td>Everyday styling</td>
-                    <td>All looks</td>
-                </tr>
-            </tbody>
-        </table>
-
     </div>
 
-    <!-- JavaScript for Hamburger -->
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
+    <footer>
+        <p>&copy; 2026 Fashion Week Final Project. All rights reserved.</p>
+    </footer>
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
         });
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
     </script>
+
 </body>
 </html>

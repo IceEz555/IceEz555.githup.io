@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Week - Locations</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .locations-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .locations-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">FASHION WEEK</a>
+        <nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="history.html" class="nav-link">History</a></li>
+                <li class="nav-item"><a href="locations.html" class="nav-link active">Locations</a></li>
+                <li class="nav-item"><a href="brands.html" class="nav-link">Brands</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="section-title">Explore Fashion Week </h1>
+        <p class="locations-intro">
+            Fashion Week is held in four major cities New York, Paris, Milan, and London each known for its
+            unique style focus.
+        </p>
+
+        <div class="grid-3 locations-grid">
+            <!-- New York -->
+            <div class="card location-card" 
+                 onclick="openLocationModal(this)"
+                 data-title="New York (NYFW)"
+                 data-desc="New York Fashion Week is known for practical and accessible fashion that reflects everyday lifestyles. Designers focus on clean silhouettes, sportswear influences, and pieces that can easily transition from runway to real life. NYFW often highlights diversity, inclusivity, and innovation."
+                 data-list="Minimalist and modern designs, Strong influence of streetwear, Focus on functionality and versatility">
+                <img src="img/Location/newyork.jpg" alt="New York">
+                <h3>New York (NYFW)</h3>
+                <p>Known for urban style, commercial appeal, and sportswear.</p>
+                <span class="learn-more">Read More &gt;</span>
+            </div>
+
+            <!-- Paris -->
+            <div class="card location-card" 
+                 onclick="openLocationModal(this)"
+                 data-title="Paris (PFW)"
+                 data-desc="Paris Fashion Week represents the highest level of luxury and craftsmanship. It is home to historic fashion houses and is known for dramatic silhouettes, intricate detailing, and haute couture presentations. Paris often sets global fashion standards."
+                 data-list="Elegant and dramatic designs, Couture craftsmanship, Artistic and conceptual runway shows">
+                <img src="img/Location/paris.jpg" alt="Paris">
+                <h3>Paris (PFW)</h3>
+                <p>The home of Haute Couture and sophisticated luxury.</p>
+                <span class="learn-more">Read More &gt;</span>
+            </div>
+
+            <!-- Milan -->
+            <div class="card location-card" 
+                 onclick="openLocationModal(this)"
+                 data-title="Milan (MFW)"
+                 data-desc="Milan Fashion Week highlights Italian craftsmanship and luxury fashion. The style emphasizes rich fabrics, strong tailoring, and glamorous aesthetics. Milan is especially known for celebrating femininity and bold visual statements."
+                 data-list="High-quality materials, Structured silhouettes, Glamorous and polished looks">
+                <img src="img/Location/milan.jpg" alt="Milan">
+                <h3>Milan (MFW)</h3>
+                <p>Famous for expert craftsmanship, leather goods, and bold prints.</p>
+                <span class="learn-more">Read More &gt;</span>
+            </div>
+
+            <!-- London -->
+             <div class="card location-card" 
+                  onclick="openLocationModal(this)"
+                  data-title="London (LFW)"
+                  data-desc="London Fashion Week is known for pushing boundaries and embracing creativity. Designers often experiment with unconventional shapes, textures, and concepts. It is considered the most innovative and youthful of the four cities."
+                  data-list="Experimental designs, Bold use of color and texture, Emphasis on individuality and self-expression">
+                <img src="img/Location/london.jpg" alt="London">
+                <h3>London (LFW)</h3>
+                <p>A hub for avant-garde design, creativity, and new talent.</p>
+                <span class="learn-more">Read More &gt;</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Modal -->
+    <div id="locationModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-image-container">
+                <img class="modal-image" id="locImg">
+            </div>
+            <div class="modal-info">
+                <h2 id="locTitle">Title</h2>
+                <p id="locDesc" style="margin-bottom: 2rem; line-height: 1.6; color: #555;"></p>
+                <h4 style="font-family: var(--font-heading); margin-bottom: 1rem; color: var(--text-color);">Key Characteristics:</h4>
+                <ul id="locList" style="list-style-type: disc; padding-left: 20px; color: #555;">
+                    <!-- JS Populated -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fashion Week Final Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+
+        // Location Modal Logic
+        const modal = document.getElementById("locationModal");
+        const modalImg = document.getElementById("locImg");
+        const modalTitle = document.getElementById("locTitle");
+        const modalDesc = document.getElementById("locDesc");
+        const modalList = document.getElementById("locList");
+        const span = document.getElementsByClassName("modal-close")[0];
+
+        function openLocationModal(element) {
+            modal.style.display = "block";
+            
+            // Get data
+            const imgSrc = element.querySelector('img').src;
+            const title = element.getAttribute("data-title");
+            const desc = element.getAttribute("data-desc");
+            const listItems = element.getAttribute("data-list").split(',');
+
+            // Populate
+            modalImg.src = imgSrc;
+            modalTitle.innerText = title;
+            modalDesc.innerText = desc;
+            
+            modalList.innerHTML = "";
+            listItems.forEach(item => {
+                const li = document.createElement("li");
+                li.innerText = item.trim();
+                li.style.marginBottom = "0.5rem";
+                modalList.appendChild(li);
+            });
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

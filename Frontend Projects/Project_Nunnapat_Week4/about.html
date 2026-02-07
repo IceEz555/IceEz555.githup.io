@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Week - About</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Part B: Color Palette - Internal Override or Specifics */
+        .about-title {
+            font-size: 3rem; 
+            margin-bottom: 1rem;
+        }
+
+        .about-intro {
+            text-align: center; 
+            max-width: 800px; 
+            margin: 2rem auto 3rem; 
+            font-size: 1.1rem; 
+            line-height: 1.8;
+        }
+
+        /* Specific Separator for About Page */
+        .separator-gold {
+            width: 60px;
+            height: 1px;
+            background-color: var(--accent-color);
+            margin: 0 auto;
+        }
+
+        .separator-full {
+            width: 100%;
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 4rem 0;
+        }
+
+        /* About Item Layout */
+        .about-grid {
+            gap: 3rem; 
+            margin-top: 4rem;
+        }
+
+        .about-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            font-family: var(--font-heading);
+        }
+
+        .about-item .separator-short {
+            width: 40px;
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 0 auto 1rem;
+        }
+
+        .about-item p {
+            font-style: italic;
+            font-family: var(--font-heading);
+            color: #555;
+            margin-bottom: 2rem;
+            padding: 0 10px;
+            min-height: 50px;
+        }
+
+        .img-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .about-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .about-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Footer Grid */
+        .about-footer-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            gap: 2rem;
+        }
+
+        .about-footer-item {
+            flex: 1;
+            min-width: 280px;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about-footer-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: var(--font-heading);
+        }
+
+        .about-footer-item .separator-short {
+            width: 40px;
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 0 auto 1rem;
+        }
+
+        .about-footer-item p {
+            font-style: italic;
+            font-family: var(--font-heading);
+            color: #555;
+        }
+
+        .icon-svg {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">FASHION WEEK</a>
+        <nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                <li class="nav-item"><a href="history.html" class="nav-link">History</a></li>
+                <li class="nav-item"><a href="locations.html" class="nav-link">Locations</a></li>
+                <li class="nav-item"><a href="brands.html" class="nav-link">Brands</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Main Title Section -->
+        <h1 class="section-title about-title">What is <span style="font-style: italic;">Fashion Week?</span></h1>
+        
+        <!-- Intro text -->
+        <p class="about-intro">
+            Fashion Week is a series of events where designers present their latest collections on the
+            runway. <br>
+            It's a major force in the fashion industry, setting trends and showcasing creative visions.
+        </p>
+
+        <!-- Long grey divider -->
+        <div class="separator-full"></div>
+
+        <!-- 3 Column Layout: Text Top, Image Bottom -->
+        <div class="grid-3 about-grid">
+            <!-- Item 1 -->
+            <div class="about-item">
+                <h3>Global Fashion Events</h3>
+                <div class="separator-short"></div>
+                <p>Held in major cities (The big 4) New York, Paris, Milan, and London.</p>
+                <div class="img-container">
+                    <img src="img/What is/global fashion events.jpg" alt="Global Fashion Events">
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="about-item">
+                <h3>Trend Setting</h3>
+                <div class="separator-short"></div>
+                <p>Shapes upcoming styles and seasonal trends.</p>
+                <div class="img-container">
+                    <img src="img/What is/trend setting.jpg" alt="Trend Setting">
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="about-item">
+                <h3>Industry Influence</h3>
+                <div class="separator-short"></div>
+                <p>Impacts media, culture, and the global market.</p>
+                <div class="img-container">
+                    <img src="img/What is/industry influence.jpg" alt="Industry Influence">
+                </div>
+            </div>
+        </div>
+
+        <div class="separator-full"></div>
+
+        <!-- Bottom Section: Icons -->
+        <div class="about-footer-grid">
+            <div class="about-footer-item">
+                <!-- Calendar SVG -->
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="#c5a059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 2V6" stroke="#c5a059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 2V6" stroke="#c5a059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 10H21" stroke="#c5a059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h4>When Does It Happen?</h4>
+                <div class="separator-short"></div>
+                <p>Twice a year: February/March & September.</p>
+            </div>
+            <div class="about-footer-item">
+                <!-- Sparkle SVG -->
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#c5a059" stroke="#c5a059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h4>Why It Matters</h4>
+                <div class="separator-short"></div>
+                <p>Drives innovation and sets the stage for future trends.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fashion Week Final Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    </script>
+
+</body>
+</html>

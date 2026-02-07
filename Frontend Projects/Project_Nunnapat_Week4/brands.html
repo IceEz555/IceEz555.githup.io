@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Week - Brands</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .brand-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 2rem auto 5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .brand-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 3rem;
+            margin-bottom: 5rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .brand-row:last-child {
+            border-bottom: none;
+        }
+
+        .brand-name {
+            width: 20%;
+            min-width: 150px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .brand-name h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .brand-grid {
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .brand-item {
+            text-align: center;
+        }
+
+        .brand-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .brand-caption {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 900px) {
+            .brand-row {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .brand-name {
+                width: 100%;
+                position: static;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .brand-grid {
+                width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">FASHION WEEK</a>
+        <nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="history.html" class="nav-link">History</a></li>
+                <li class="nav-item"><a href="locations.html" class="nav-link">Locations</a></li>
+                <li class="nav-item"><a href="brands.html" class="nav-link active">Brands</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="section-title" style="margin-bottom: 1rem;">Brands & Their <span style="font-style: italic;">Iconic Looks</span></h1>
+        
+        <!-- Gold line under title -->
+
+        <p class="brand-intro">
+            These brands have defined fashion with signature looks that left a lasting impact on style.
+        </p>
+        
+        <!-- Chanel Config -->
+        <div class="brand-row">
+            <div class="brand-name">
+                <h2>Chanel</h2>
+            </div>
+            <div class="brand-grid">
+                <div class="brand-item" 
+                     data-title="Chanel Swan Dress"
+                     data-brand="Chanel"
+                     data-collection="Haute Couture Spring/Summer 1990"
+                     data-designer="Karl Lagerfeld"
+                     data-model="Linda Evangelista"
+                     onclick="openModal(this)">
+                    <img src="img/Brand/chanel_1.jpg" alt="Chanel Swan Dress">
+                    <div class="brand-caption">Swan Dress, 1990</div>
+                </div>
+                <div class="brand-item"
+                     data-title="Chanel Gold Cage Dress"
+                     data-brand="Chanel"
+                     data-collection="Haute Couture Spring/Summer 1995"
+                     data-designer="Karl Lagerfeld"
+                     data-fw="Paris Fashion Week"
+                     data-model="Claudia Schiffer"
+                     onclick="openModal(this)">
+                    <img src="img/Brand/chanel_2.jpg" alt="Chanel Gold Cage Dress">
+                    <div class="brand-caption">Gold Cage Dress, 1995</div>
+                </div>
+                <div class="brand-item"
+                     data-title="Chanel Black-and-White Tulle Dress"
+                     data-brand="Chanel"
+                     data-collection="Spring/Summer 1994 Ready-to-Wear"
+                     data-designer="Karl Lagerfeld"
+                     data-fw="Paris Fashion Week"
+                     onclick="openModal(this)">
+                    <img src="img/Brand/chanel_3.jpg" alt="Chanel Tulle Dress">
+                    <div class="brand-caption">Black & White Tulle, 1994</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dior Config -->
+        <div class="brand-row">
+            <div class="brand-name">
+                <h2>Dior</h2>
+            </div>
+            <div class="brand-grid">
+                <div class="brand-item"
+                     data-title="Christian Dior Black & Silver Couture Gown"
+                     data-brand="Christian Dior"
+                     data-collection="Haute Couture Fall/Winter 1995–1996"
+                     data-designer="Gianfranco Ferré"
+                     data-fw="Paris Fashion Week"
+                     data-model="Yasmeen Ghauri"
+                     onclick="openModal(this)">
+                    <img src="img/Brand/Dior_1.jpg" alt="Dior Couture Gown">
+                    <div class="brand-caption">Black & Silver Couture, 1995</div>
+                </div>
+                <div class="brand-item"
+                     data-title="Christian Dior – Asian-Inspired Couture Look"
+                     data-brand="Christian Dior"
+                     data-collection="Haute Couture Fall/Winter 2007"
+                     data-designer="John Galliano"
+                     data-fw="Paris Fashion Week"
+                     onclick="openModal(this)">
+                    <img src="img/Brand/Dior_2.jpg" alt="Dior Asian-Inspired">
+                    <div class="brand-caption">Asian-Inspired Look, 2007</div>
+                </div>
+                <div class="brand-item"
+                     data-title="Christian Dior Black Strapless Couture Dress"
+                     data-brand="Christian Dior"
+                     data-collection="Haute Couture Spring/Summer 1998"
+                     data-designer="John Galliano"
+                     data-fw="Paris Fashion Week"
+                     onclick="openModal(this)">
+                    <img src="img/Brand/Dior_3.jpg" alt="Dior Strapless Dress">
+                    <div class="brand-caption">Strapless Couture, 1998</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Versace Config -->
+        <div class="brand-row">
+            <div class="brand-name">
+                <h2>Versace</h2>
+            </div>
+            <div class="brand-grid">
+                <div class="brand-item"
+                     data-title="Atelier Versace Sheer Print Gown"
+                     data-brand="Versace"
+                     data-collection="Atelier Versace Spring/Summer 2014"
+                     data-designer="Donatella Versace"
+                     data-fw="Paris Fashion Week (Haute Couture)"
+                     onclick="openModal(this)">
+                    <img src="img/Brand/Versace_1.jpg" alt="Versace Sheer Print">
+                    <div class="brand-caption">Sheer Print Gown, 2014</div>
+                </div>
+                <div class="brand-item"
+                     data-title="Sheer Crystal Dress – Versace Spring/Summer 1998"
+                     data-brand="Versace"
+                     data-collection="Spring/Summer 1998 Ready-to-Wear"
+                     data-designer="Gianni Versace"
+                     data-fw="Milan Fashion Week"
+                     onclick="openModal(this)">
+                    <img src="img/Brand/Versace_2.jpg" alt="Versace Crystal Dress">
+                    <div class="brand-caption">Sheer Crystal Dress, 1998</div>
+                </div>
+                <div class="brand-item"
+                     data-title="Versace Fall/Winter 2017 – Blazer Mini Dress & Thigh-High Boots"
+                     data-brand="Versace"
+                     data-collection="Fall/Winter 2017 Ready-to-Wear"
+                     data-designer="Donatella Versace"
+                     data-fw="Milan Fashion Week"
+                     data-model="Gigi Hadid"
+                     onclick="openModal(this)">
+                    <img src="img/Brand/Versace_3.jpg" alt="Versace Blazer Dress">
+                    <div class="brand-caption">Blazer Mini Dress, 2017</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="brandModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-image-container">
+                <img class="modal-image" id="img01">
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle">Title</h2>
+                <ul id="modalDetails">
+                    <!-- Javascript will populate this -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fashion Week Final Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+
+        // Modal Logic
+        const modal = document.getElementById("brandModal");
+        const modalImg = document.getElementById("img01");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDetails = document.getElementById("modalDetails");
+        const span = document.getElementsByClassName("modal-close")[0];
+
+        function openModal(element) {
+            modal.style.display = "block";
+            
+            // Get data from attributes
+            const imgParams = element.querySelector('img').src;
+            const title = element.getAttribute("data-title");
+            const brand = element.getAttribute("data-brand");
+            const collection = element.getAttribute("data-collection");
+            const designer = element.getAttribute("data-designer");
+            const fw = element.getAttribute("data-fw");
+            const model = element.getAttribute("data-model");
+
+            // Populate Modal
+            modalImg.src = imgParams;
+            modalTitle.innerText = title;
+            
+            modalDetails.innerHTML = `
+                <li><strong>Brand:</strong> ${brand}</li>
+                <li><strong>Collection:</strong> ${collection}</li>
+                <li><strong>Designer:</strong> ${designer}</li>
+                ${fw ? `<li><strong>Fashion Week:</strong> ${fw}</li>` : ''}
+                ${model ? `<li><strong>Model:</strong> ${model}</li>` : ''}
+            `;
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
