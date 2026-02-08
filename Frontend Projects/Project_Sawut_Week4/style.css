@@ -43,7 +43,7 @@ img {
 }
 
 .container {
-    max-width: 1000px; /* Constrain width to look more like a doc/wireframe */
+    max-width: 1000px; /* Constrain width to look more like a wireframe */
     margin: 0 auto;
     padding: 20px;
 }
@@ -53,6 +53,9 @@ header {
     background-color: var(--arsenal-white);
     padding-top: 20px;
     border-bottom: 4px solid var(--arsenal-red); /* Thick Red Border */
+    position: sticky; /* Sticky Nav */
+    top: 0;
+    z-index: 1000;
 }
 
 .header-top {
@@ -95,8 +98,9 @@ header {
 .navbar {
     display: flex;
     justify-content: center;
-    padding: 15px 0;
-    background-color: var(--arsenal-white);
+    list-style: none;
+    gap: 30px; /* Space between links */
+    padding: 15px 0; /* Restore padding to prevent overlap */
 }
 
 .nav-links {
@@ -105,17 +109,34 @@ header {
     gap: 30px;
 }
 
-.nav-links a {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 1.3rem;
-    color: var(--arsenal-black);
+.nav-links li a {
     text-decoration: none;
-    border-bottom: 2px solid transparent;
+    color: var(--arsenal-black);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--arsenal-red);
-    border-bottom: 2px solid var(--arsenal-red); /* Red Underline */
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--arsenal-red); /* Hover & Active Color */
+}
+
+.nav-links li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--arsenal-red);
+    transition: width 0.3s;
+    margin-top: 5px; /* Spacing line below text */
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
 }
 
 /* Hamburger (Simple Position) */
@@ -126,8 +147,7 @@ header {
     cursor: pointer;
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 35px;
 }
 
 .bar {
@@ -164,6 +184,7 @@ header {
     margin-top: 30px;
 }
 
+/* Wireframe Box with Hover Effect */
 .wireframe-box {
     background: white;
     border-radius: 8px;
@@ -171,7 +192,8 @@ header {
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
-    border: 1px solid #ffcccc; /* Light red border */
+    border: 1px solid #ffcccc;
+    cursor: pointer;
 }
 
 .wireframe-box img {
@@ -181,26 +203,45 @@ header {
     transition: transform 0.3s ease;
 }
 
-.wireframe-box h3 {
+/* Hover Content Wrapper */
+.hover-content {
     position: absolute;
-    bottom: 0;
+    top: -100%; /* Fully hidden at top */
     left: 0;
     width: 100%;
+    height: 100%; /* Cover full box */
     background: rgba(239, 1, 7, 0.9); /* Red overlay */
     color: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.4s ease; /* Smooth slide */
+    z-index: 2;
+}
+
+.hover-content h3 {
     font-family: 'Bebas Neue';
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: bold;
-    z-index: 2;
+}
+
+.hover-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .wireframe-box:hover img {
     transform: scale(1.1);
+}
+
+.wireframe-box:hover .hover-content {
+    top: 0; /* Slide down to cover box */
 }
 
 .wireframe-box:hover {
@@ -208,7 +249,93 @@ header {
     border-color: var(--arsenal-red);
 }
 
-/* Specific Player Grid (Row of 3 - Wireframe Layout) */
+/* Carousel Styles */
+/* Gallery Styles */
+.gallery-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-display {
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.main-display img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.main-info {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.main-info h3 {
+    color: var(--arsenal-red);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.main-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Thumbnail Row */
+.thumbnail-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.thumb-box {
+    flex: 1;
+    cursor: pointer;
+    text-align: center;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.thumb-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.thumb-box h4 {
+    padding: 10px;
+    margin: 0;
+    font-family: 'Bebas Neue';
+    color: var(--arsenal-black);
+    background: #f1f1f1;
+}
+
+.thumb-box:hover {
+    transform: translateY(-5px);
+}
+
+.thumb-box.active {
+    border-color: var(--arsenal-red);
+    transform: scale(1.05);
+}
+
+.thumb-box.active h4 {
+    background: var(--arsenal-red);
+    color: white;
+}
+
+/* Specific Player Grid*/
 .player-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -254,12 +381,10 @@ header {
 
 .player-box:hover {
     transform: scale(1.05);
-    /* background-color: var(--arsenal-red); <-- Removed to keep white/red split on hover */
-    /* color: white; */
     box-shadow: 0 8px 15px rgba(239, 1, 7, 0.2);
 }
 
-/* History Grid Mix (Wireframe Layout) */
+/* History Grid Mix */
 .history-grid-mix {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -337,8 +462,8 @@ tr:hover {
         display: flex; /* Show it */
         position: absolute;
         right: 0;
-        top: 50%; /* Approx center vertically relative to header-top or adjust */
-        transform: translateY(-50%);
+        right: 0;
+        top: 25px; /* Adjusted manually for mobile */
     }
 
     /* Logic to Hide/Show Nav */
@@ -387,4 +512,90 @@ tr:hover {
     .player-row {
         grid-template-columns: 1fr;
     }
+}
+
+/* Success Metrics Section */
+.success-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid var(--arsenal-red);
+}
+
+.success-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.success-item h3 {
+    font-size: 3rem;
+    color: var(--arsenal-red);
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue';
+}
+
+.success-item p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Accordion Styles */
+.accordion {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-family: 'Bebas Neue';
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: #ddd;
+    color: var(--arsenal-red);
+}
+
+.accordion-header::after {
+    content: '\002B'; /* Plus sign */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.accordion-header.active::after {
+    content: "\2212"; /* Minus sign */
+}
+
+.accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-content p {
+    padding: 20px 0;
+    font-size: 1rem;
+    line-height: 1.6;
 }

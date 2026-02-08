@@ -26,9 +26,9 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="history.html">History</a></li>
-                <li><a href="team.html">Current Team</a></li>
-                <li><a href="#">Fixtures</a></li>
-                <li><a href="#">Achievement</a></li>
+                <li><a href="team.html" class="active">Current Team</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a href="achievement.html">Achievement</a></li>
             </ul>
         </nav>
     </header>
@@ -164,7 +164,9 @@
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
-        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        hamburger.addEventListener('click', () => { 
+            navLinks.classList.toggle('active'); 
+        });
     </script>
 </body>
 </html>

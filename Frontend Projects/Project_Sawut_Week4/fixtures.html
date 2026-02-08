@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal Fanpage Website | Fixtures</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            background: white;
+        }
+
+        .table-header {
+            background-color: #1a1a1a; /* Dark header match image */
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Bebas Neue';
+            font-size: 1.2rem;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        /* Specific align for Team col */
+        th:nth-child(2), td:nth-child(2) {
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Pos column width */
+        th:first-child, td:first-child {
+            width: 50px;
+        }
+
+        /* Row colors */
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        /* Highlights */
+        .pos-1 { color: #d00; font-weight: bold; } /* Arsenal Red for 1st */
+        
+        .pts-col {
+            font-weight: bold;
+            color: #d00;
+        }
+
+        .team-logo-small {
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        /* UCL Specific */
+        .ucl-header {
+            background-color: #0b162a; /* UCL Dark Blue */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <h1 class="site-title">Arsenal Fanpage website</h1>
+            <div class="logo-box">
+                <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal Logo">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="team.html">Current Team</a></li>
+                <li><a href="fixtures.html" class="active">Fixtures</a></li>
+                <li><a href="achievement.html">Achievement</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Styled Page Title -->
+        <div style="border-left: 5px solid #EF0107; padding-left: 15px; margin-bottom: 20px;">
+             <h2 class="page-title" style="margin: 0; border: none; padding: 0;">FIXTURES & STANDINGS</h2>
+        </div>
+
+        <!-- Premier League Table -->
+        <h3 class="table-header">PREMIER LEAGUE 2025-2026</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>POS</th>
+                        <th>TEAM</th>
+                        <th>P</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>+/-</th>
+                        <th>PTS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #fff0f0;">
+                        <td class="pos-1">1</td>
+                        <td style="font-weight: bold; color: #d00;">
+                            Arsenal
+                        </td>
+                        <td>25</td><td>17</td><td>5</td><td>3</td><td>49</td><td>17</td><td>32</td><td class="pts-col">56</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Manchester City</td>
+                        <td>24</td><td>14</td><td>5</td><td>5</td><td>48</td><td>23</td><td>25</td><td class="pts-col">47</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Aston Villa</td>
+                        <td>25</td><td>14</td><td>5</td><td>6</td><td>36</td><td>27</td><td>9</td><td class="pts-col">47</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Manchester United</td>
+                        <td>25</td><td>12</td><td>8</td><td>5</td><td>45</td><td>35</td><td>10</td><td class="pts-col">44</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Chelsea</td>
+                        <td>25</td><td>12</td><td>7</td><td>6</td><td>45</td><td>28</td><td>17</td><td class="pts-col">43</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Liverpool</td>
+                        <td>24</td><td>11</td><td>6</td><td>7</td><td>39</td><td>33</td><td>6</td><td class="pts-col">39</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Brentford</td>
+                        <td>25</td><td>12</td><td>3</td><td>10</td><td>39</td><td>34</td><td>5</td><td class="pts-col">39</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Everton</td>
+                        <td>25</td><td>10</td><td>7</td><td>8</td><td>28</td><td>28</td><td>0</td><td class="pts-col">37</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Sunderland</td>
+                        <td>25</td><td>9</td><td>9</td><td>7</td><td>27</td><td>29</td><td>-2</td><td class="pts-col">36</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Fulham</td>
+                        <td>25</td><td>10</td><td>4</td><td>11</td><td>35</td><td>37</td><td>-2</td><td class="pts-col">34</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- UCL Table -->
+        <h3 class="table-header ucl-header">UEFA CHAMPIONS LEAGUE 2025-2026</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>POS</th>
+                        <th>TEAM</th>
+                        <th>P</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>+/-</th>
+                        <th>PTS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #fff0f0;">
+                        <td class="pos-1">1</td>
+                        <td style="font-weight: bold; color: #d00;">
+                            Arsenal
+                        </td>
+                        <td>8</td><td>8</td><td>0</td><td>0</td><td>23</td><td>4</td><td>19</td><td class="pts-col">24</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Bayern Munich</td>
+                        <td>8</td><td>7</td><td>0</td><td>1</td><td>22</td><td>8</td><td>14</td><td class="pts-col">21</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Liverpool</td>
+                        <td>8</td><td>6</td><td>0</td><td>2</td><td>20</td><td>8</td><td>12</td><td class="pts-col">18</td>
+                    </tr>
+                     <tr>
+                        <td>4</td>
+                        <td>Tottenham Hotspur</td>
+                        <td>8</td><td>5</td><td>2</td><td>1</td><td>17</td><td>7</td><td>10</td><td class="pts-col">17</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>FC Barcelona</td>
+                        <td>8</td><td>5</td><td>1</td><td>2</td><td>22</td><td>14</td><td>8</td><td class="pts-col">16</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Chelsea</td>
+                        <td>8</td><td>5</td><td>1</td><td>2</td><td>17</td><td>10</td><td>7</td><td class="pts-col">16</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Sporting CP</td>
+                        <td>8</td><td>5</td><td>1</td><td>2</td><td>17</td><td>11</td><td>6</td><td class="pts-col">16</td>
+                    </tr>
+                     <tr>
+                        <td>8</td>
+                        <td>Manchester City</td>
+                        <td>8</td><td>5</td><td>1</td><td>2</td><td>15</td><td>9</td><td>6</td><td class="pts-col">16</td>
+                    </tr>
+                     <tr>
+                        <td>9</td>
+                        <td>Real Madrid</td>
+                        <td>8</td><td>5</td><td>0</td><td>3</td><td>21</td><td>12</td><td>9</td><td class="pts-col">15</td>
+                    </tr>
+                     <tr>
+                        <td>10</td>
+                        <td>Inter Milan</td>
+                        <td>8</td><td>5</td><td>0</td><td>3</td><td>15</td><td>7</td><td>8</td><td class="pts-col">15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+</html>
