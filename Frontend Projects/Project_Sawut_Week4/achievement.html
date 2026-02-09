@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arsenal Fanpage Website | Achievements</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .honours-intro {
             text-align: center;
@@ -70,6 +70,56 @@
             max-height: 250px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        .achievement-container {
+             max-width: 800px;
+        }
+        .history-tag {
+            color: var(--arsenal-red); 
+            font-weight: bold; 
+            font-family: 'Bebas Neue'; 
+            letter-spacing: 1px; 
+            margin-bottom: 10px;
+        }
+        .honours-title {
+            text-align: left; 
+            font-size: 3rem; 
+            margin-top: 0; 
+            margin-bottom: 20px;
+        }
+        .hero-image-container {
+            margin-bottom: 30px;
+        }
+        .hero-image-container img {
+            width: 100%; 
+            border-radius: 4px;
+        }
+        .honours-intro-text {
+            text-align: left; 
+            color: #333; 
+            font-weight: normal; 
+            margin-bottom: 50px;
+        }
+        .trophy-section-title {
+            font-size: 2.5rem; 
+            margin-bottom: 20px;
+        }
+        .trophy-img-container {
+            margin-bottom: 20px;
+        }
+        .trophy-img-container img {
+            width: 100%; 
+            border-radius: 4px;
+        }
+        .trophy-years {
+            margin-bottom: 40px; 
+            line-height: 1.6;
+        }
+        .note-text {
+            font-size: 0.9rem; 
+            margin-top: 20px; 
+            font-style: italic; 
+            color: #666;
+        }
         .copyright-footer {
             margin-top: 50px;
             padding-top: 20px;
@@ -106,30 +156,31 @@
         </nav>
     </header>
 
-    <div class="container" style="max-width: 800px;">
-        <h2 class="page-title" style="text-align: left; font-size: 3rem; margin-top: 0; margin-bottom: 20px;">Honours</h2>
+    <div class="container achievement-container">
+        <div class="history-tag">HISTORY</div>
+        <h2 class="page-title honours-title">Honours</h2>
 
         <!-- Hero Image (Invincibles 2004) -->
-        <div style="margin-bottom: 30px;">
-             <img src="https://www.arsenal.com/sites/default/files/styles/large_16x9/public/images/champions_2004.jpg?h=6dff888f&auto=webp&itok=K03lQk1O" alt="2004 Champions" title="2003/04 Invincibles" style="width: 100%; border-radius: 4px;">
+        <div class="hero-image-container">
+             <img src="https://www.arsenal.com/sites/default/files/styles/large_16x9/public/images/champions_2004.jpg?h=6dff888f&auto=webp&itok=K03lQk1O" alt="2004 Champions" title="2003/04 Invincibles">
         </div>
         
-        <p class="honours-intro" style="text-align: left; color: #333; font-weight: normal; margin-bottom: 50px;">We've won 48 major trophies in our illustrious history.</p>
+        <p class="honours-intro-text">We've won 48 major trophies in our illustrious history.</p>
 
         <!-- League Champions -->
         <div class="achievement-section">
-            <h3 class="section-heading" style="font-size: 2.5rem; margin-bottom: 20px;">LEAGUE CHAMPIONS (13)</h3>
-            <div style="margin-bottom: 20px;">
-                 <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/premierleague-champions-1998.png?auto=webp&itok=lNmjzdKV" alt="1998 Champions" title="1997/98 Premier League Champions" style="width: 100%; border-radius: 4px;">
+            <h3 class="section-heading trophy-section-title">LEAGUE CHAMPIONS (13)</h3>
+            <div class="trophy-img-container">
+                 <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/premierleague-champions-1998.png?auto=webp&itok=lNmjzdKV" alt="1998 Champions" title="1997/98 Premier League Champions">
             </div>
-            <p style="margin-bottom: 40px; line-height: 1.6;">2003/04, 2001/02, 1997/98, 1990/91, 1988/89, 1970/71, 1952/53, 1947/48, 1937/38, 1934/35, 1933/34, 1932/33, 1930/31</p>
+            <p class="trophy-years">2003/04, 2001/02, 1997/98, 1990/91, 1988/89, 1970/71, 1952/53, 1947/48, 1937/38, 1934/35, 1933/34, 1932/33, 1930/31</p>
         </div>
 
         <!-- FA Cup -->
         <div class="achievement-section">
-            <h3 class="section-heading" style="font-size: 2.5rem; margin-bottom: 20px;">FA CUP WINNERS (14)*</h3>
-             <div style="margin-bottom: 20px;">
-                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/fa-cup-winners-2020.png?auto=webp&itok=jRh1OpH6" alt="FA Cup 2020" title="2020 FA Cup Winners" style="width: 100%; border-radius: 4px;">
+            <h3 class="section-heading trophy-section-title">FA CUP WINNERS (14)*</h3>
+             <div class="trophy-img-container">
+                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/fa-cup-winners-2020.png?auto=webp&itok=jRh1OpH6" alt="FA Cup 2020" title="2020 FA Cup Winners">
             </div>
             <table class="achievement-table no-border">
                 <tbody>
@@ -149,14 +200,14 @@
                     <tr><td class="year-col">1930</td><td>Beat Huddersfield Town 2-0</td></tr>
                 </tbody>
             </table>
-             <p style="font-size: 0.9rem; margin-top: 20px; font-style: italic; color: #666;">* We currently hold the record for most FA Cup wins</p>
+             <p class="note-text">* We currently hold the record for most FA Cup wins</p>
         </div>
 
         <!-- League Cup -->
         <div class="achievement-section">
-            <h3 class="section-heading" style="font-size: 2.5rem; margin-bottom: 20px;">LEAGUE CUP WINNERS (2)</h3>
-             <div style="margin-bottom: 20px;">
-                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/leaguecup_1993_2.jpg?auto=webp&itok=hXH5eDBC" alt="League Cup 1993" title="1993 League Cup Winners" style="width: 100%; border-radius: 4px;">
+            <h3 class="section-heading trophy-section-title">LEAGUE CUP WINNERS (2)</h3>
+             <div class="trophy-img-container">
+                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/leaguecup_1993_2.jpg?auto=webp&itok=hXH5eDBC" alt="League Cup 1993" title="1993 League Cup Winners">
             </div>
             <table class="achievement-table no-border">
                 <tbody>
@@ -168,9 +219,9 @@
 
         <!-- European Fairs Cup -->
         <div class="achievement-section">
-            <h3 class="section-heading" style="font-size: 2.5rem; margin-bottom: 20px;">EUROPEAN FAIRS CUP WINNERS (1)</h3>
-             <div style="margin-bottom: 20px;">
-                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/fairs_cup_mee_0.jpg?auto=webp&itok=GAnzvk1U" alt="Fairs Cup" title="1970 European Fairs Cup Winners" style="width: 100%; border-radius: 4px;">
+            <h3 class="section-heading trophy-section-title">EUROPEAN FAIRS CUP WINNERS (1)</h3>
+             <div class="trophy-img-container">
+                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/fairs_cup_mee_0.jpg?auto=webp&itok=GAnzvk1U" alt="Fairs Cup" title="1970 European Fairs Cup Winners">
             </div>
             <table class="achievement-table no-border">
                 <tbody>
@@ -181,9 +232,9 @@
 
         <!-- European Cup Winners Cup -->
         <div class="achievement-section">
-            <h3 class="section-heading" style="font-size: 2.5rem; margin-bottom: 20px;">EUROPEAN CUP WINNERS CUP WINNERS (1)</h3>
-             <div style="margin-bottom: 20px;">
-                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/cupwinnerscup_1994.jpg?auto=webp&itok=nvMBBf2e" alt="Cup Winners Cup" title="1994 Cup Winners Cup Winners" style="width: 100%; border-radius: 4px;">
+            <h3 class="section-heading trophy-section-title">EUROPEAN CUP WINNERS CUP WINNERS (1)</h3>
+             <div class="trophy-img-container">
+                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/cupwinnerscup_1994.jpg?auto=webp&itok=nvMBBf2e" alt="Cup Winners Cup" title="1994 Cup Winners Cup Winners">
             </div>
             <table class="achievement-table no-border">
                 <tbody>
@@ -194,9 +245,9 @@
 
         <!-- Community Shield -->
         <div class="achievement-section">
-            <h3 class="section-heading" style="font-size: 2.5rem; margin-bottom: 20px;">CHARITY/COMMUNITY SHIELD WINNERS (16+1 SHARED)</h3>
-             <div style="margin-bottom: 20px;">
-                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/community-shield-lift-2023.png?auto=webp&itok=VTGQrvwH" alt="Shield 2023" title="2023 Community Shield Winners" style="width: 100%; border-radius: 4px;">
+            <h3 class="section-heading trophy-section-title">CHARITY/COMMUNITY SHIELD WINNERS (16+1 SHARED)</h3>
+             <div class="trophy-img-container">
+                <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/community-shield-lift-2023.png?auto=webp&itok=VTGQrvwH" alt="Shield 2023" title="2023 Community Shield Winners">
             </div>
             <table class="achievement-table no-border">
                 <tbody>
@@ -224,7 +275,6 @@
         <p class="copyright-footer">
             Copyright 2026 The Arsenal Football Club Limited. Permission to use quotations from this article is granted subject to appropriate credit being given to www.arsenal.com as the source.
         </p>
-
     </div>
 
     <script>

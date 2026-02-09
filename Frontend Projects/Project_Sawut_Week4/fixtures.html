@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arsenal Fanpage Website | Fixtures</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .table-container {
             overflow-x: auto;
@@ -83,6 +83,18 @@
         .ucl-header {
             background-color: #0b162a; /* UCL Dark Blue */
         }
+
+        .fixtures-header-container {
+            border-left: 5px solid #EF0107; 
+            padding-left: 15px; 
+            margin-bottom: 20px;
+        }
+
+        .no-border-margin {
+            margin: 0 !important; 
+            border: none !important; 
+            padding: 0 !important;
+        }
     </style>
 </head>
 <body>
@@ -113,8 +125,8 @@
 
     <div class="container">
         <!-- Styled Page Title -->
-        <div style="border-left: 5px solid #EF0107; padding-left: 15px; margin-bottom: 20px;">
-             <h2 class="page-title" style="margin: 0; border: none; padding: 0;">FIXTURES & STANDINGS</h2>
+        <div class="fixtures-header-container">
+             <h2 class="page-title no-border-margin">FIXTURES & STANDINGS</h2>
         </div>
 
         <!-- Premier League Table -->
@@ -141,27 +153,62 @@
                         <td style="font-weight: bold; color: #d00;">
                             Arsenal
                         </td>
-                        <td>25</td><td>17</td><td>5</td><td>3</td><td>49</td><td>17</td><td>32</td><td class="pts-col">56</td>
+                        <td>25</td>
+                        <td>17</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>49</td>
+                        <td>17</td>
+                        <td>32</td>
+                        <td class="pts-col">56</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Manchester City</td>
-                        <td>24</td><td>14</td><td>5</td><td>5</td><td>48</td><td>23</td><td>25</td><td class="pts-col">47</td>
+                        <td>24</td>
+                        <td>14</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>48</td>
+                        <td>23</td>
+                        <td>25</td>
+                        <td class="pts-col">47</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Aston Villa</td>
-                        <td>25</td><td>14</td><td>5</td><td>6</td><td>36</td><td>27</td><td>9</td><td class="pts-col">47</td>
+                        <td>25</td>
+                        <td>14</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>36</td>
+                        <td>27</td>
+                        <td>9</td>
+                        <td class="pts-col">47</td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Manchester United</td>
-                        <td>25</td><td>12</td><td>8</td><td>5</td><td>45</td><td>35</td><td>10</td><td class="pts-col">44</td>
+                        <td>25</td>
+                        <td>12</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>45</td>
+                        <td>35</td>
+                        <td>10</td>
+                        <td class="pts-col">44</td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Chelsea</td>
-                        <td>25</td><td>12</td><td>7</td><td>6</td><td>45</td><td>28</td><td>17</td><td class="pts-col">43</td>
+                        <td>25</td>
+                        <td>12</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>45</td>
+                        <td>28</td>
+                        <td>17</td>
+                        <td class="pts-col">43</td>
                     </tr>
                     <tr>
                         <td>6</td>
@@ -171,22 +218,50 @@
                     <tr>
                         <td>7</td>
                         <td>Brentford</td>
-                        <td>25</td><td>12</td><td>3</td><td>10</td><td>39</td><td>34</td><td>5</td><td class="pts-col">39</td>
+                        <td>25</td>
+                        <td>12</td>
+                        <td>3</td>
+                        <td>10</td>
+                        <td>39</td>
+                        <td>34</td>
+                        <td>5</td>
+                        <td class="pts-col">39</td>
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>Everton</td>
-                        <td>25</td><td>10</td><td>7</td><td>8</td><td>28</td><td>28</td><td>0</td><td class="pts-col">37</td>
+                        <td>25</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>28</td>
+                        <td>28</td>
+                        <td>0</td>
+                        <td class="pts-col">37</td>
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>Sunderland</td>
-                        <td>25</td><td>9</td><td>9</td><td>7</td><td>27</td><td>29</td><td>-2</td><td class="pts-col">36</td>
+                        <td>25</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>7</td>
+                        <td>27</td>
+                        <td>29</td>
+                        <td>-2</td>
+                        <td class="pts-col">36</td>
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>Fulham</td>
-                        <td>25</td><td>10</td><td>4</td><td>11</td><td>35</td><td>37</td><td>-2</td><td class="pts-col">34</td>
+                        <td>25</td>
+                        <td>10</td>
+                        <td>4</td>
+                        <td>11</td>
+                        <td>35</td>
+                        <td>37</td>
+                        <td>-2</td>
+                        <td class="pts-col">34</td>
                     </tr>
                 </tbody>
             </table>
@@ -216,52 +291,122 @@
                         <td style="font-weight: bold; color: #d00;">
                             Arsenal
                         </td>
-                        <td>8</td><td>8</td><td>0</td><td>0</td><td>23</td><td>4</td><td>19</td><td class="pts-col">24</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>23</td>
+                        <td>4</td>
+                        <td>19</td>
+                        <td class="pts-col">24</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Bayern Munich</td>
-                        <td>8</td><td>7</td><td>0</td><td>1</td><td>22</td><td>8</td><td>14</td><td class="pts-col">21</td>
+                        <td>8</td>
+                        <td>7</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>22</td>
+                        <td>8</td>
+                        <td>14</td>
+                        <td class="pts-col">21</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Liverpool</td>
-                        <td>8</td><td>6</td><td>0</td><td>2</td><td>20</td><td>8</td><td>12</td><td class="pts-col">18</td>
+                        <td>8</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>20</td>
+                        <td>8</td>
+                        <td>12</td>
+                        <td class="pts-col">18</td>
                     </tr>
                      <tr>
                         <td>4</td>
                         <td>Tottenham Hotspur</td>
-                        <td>8</td><td>5</td><td>2</td><td>1</td><td>17</td><td>7</td><td>10</td><td class="pts-col">17</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>17</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td class="pts-col">17</td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>FC Barcelona</td>
-                        <td>8</td><td>5</td><td>1</td><td>2</td><td>22</td><td>14</td><td>8</td><td class="pts-col">16</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>22</td>
+                        <td>14</td>
+                        <td>8</td>
+                        <td class="pts-col">16</td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Chelsea</td>
-                        <td>8</td><td>5</td><td>1</td><td>2</td><td>17</td><td>10</td><td>7</td><td class="pts-col">16</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>17</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td class="pts-col">16</td>
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>Sporting CP</td>
-                        <td>8</td><td>5</td><td>1</td><td>2</td><td>17</td><td>11</td><td>6</td><td class="pts-col">16</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>17</td>
+                        <td>11</td>
+                        <td>6</td>
+                        <td class="pts-col">16</td>
                     </tr>
                      <tr>
                         <td>8</td>
                         <td>Manchester City</td>
-                        <td>8</td><td>5</td><td>1</td><td>2</td><td>15</td><td>9</td><td>6</td><td class="pts-col">16</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>15</td>
+                        <td>9</td>
+                        <td>6</td>
+                        <td class="pts-col">16</td>
                     </tr>
                      <tr>
                         <td>9</td>
                         <td>Real Madrid</td>
-                        <td>8</td><td>5</td><td>0</td><td>3</td><td>21</td><td>12</td><td>9</td><td class="pts-col">15</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>3</td>
+                        <td>21</td>
+                        <td>12</td>
+                        <td>9</td>
+                        <td class="pts-col">15</td>
                     </tr>
                      <tr>
                         <td>10</td>
                         <td>Inter Milan</td>
-                        <td>8</td><td>5</td><td>0</td><td>3</td><td>15</td><td>7</td><td>8</td><td class="pts-col">15</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>3</td>
+                        <td>15</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td class="pts-col">15</td>
                     </tr>
                 </tbody>
             </table>
