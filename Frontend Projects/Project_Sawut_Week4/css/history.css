@@ -1,0 +1,160 @@
+/* === History Page Specific Styles === */
+
+/* Gallery Styles */
+.gallery-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-display {
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.main-display img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.main-info {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.main-info h3 {
+    color: var(--arsenal-red);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.main-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Thumbnail Row */
+.thumbnail-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.thumb-box {
+    flex: 1;
+    cursor: pointer;
+    text-align: center;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.thumb-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.thumb-box h4 {
+    padding: 10px;
+    margin: 0;
+    font-family: 'Bebas Neue';
+    color: var(--arsenal-black);
+    background: #f1f1f1;
+}
+
+.thumb-box:hover {
+    transform: translateY(-5px);
+}
+
+.thumb-box.active {
+    border-color: var(--arsenal-red);
+    transform: scale(1.05);
+}
+
+.thumb-box.active h4 {
+    background: var(--arsenal-red);
+    color: white;
+}
+
+/* Accordion Styles */
+.accordion {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-family: 'Bebas Neue';
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: #ddd;
+    color: var(--arsenal-red);
+}
+
+.accordion-header::after {
+    content: '\002B'; /* Plus sign */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.accordion-header.active::after {
+    content: "\2212"; /* Minus sign */
+}
+
+.accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-content p {
+    padding: 20px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* History Grid Mix (if used) */
+.history-grid-mix {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.h-box-large { grid-column: span 1; height: 200px; }
+.h-box-wide { grid-column: span 2; height: 200px; }
+.h-box-vert { grid-row: span 2; height: 100%; }
+
+@media (max-width: 768px) {
+    .history-grid-mix {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
