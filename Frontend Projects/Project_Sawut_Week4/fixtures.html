@@ -17,6 +17,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
             background: white;
+            caption-side: bottom;
         }
 
         .table-header {
@@ -104,7 +105,7 @@
         <div class="header-top">
             <h1 class="site-title">Arsenal Fanpage website</h1>
             <div class="logo-box">
-                <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal Logo" title="Arsenal Football Club Logo">
             </div>
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
@@ -123,7 +124,7 @@
         </nav>
     </header>
 
-    <div class="container">
+    <main class="container">
         <!-- Styled Page Title -->
         <div class="fixtures-header-container">
              <h2 class="page-title no-border-margin">FIXTURES & STANDINGS</h2>
@@ -147,6 +148,7 @@
                         <th>PTS</th>
                     </tr>
                 </thead>
+                <caption>Premier League Standings 2025-2026</caption>
                 <tbody>
                     <tr style="background-color: #fff0f0;">
                         <td class="pos-1">1</td>
@@ -271,6 +273,7 @@
         <h3 class="table-header ucl-header">UEFA CHAMPIONS LEAGUE 2025-2026</h3>
         <div class="table-container">
             <table>
+                <caption>Champions League Standings 2025-2026</caption>
                 <thead>
                     <tr>
                         <th>POS</th>
@@ -412,7 +415,7 @@
             </table>
         </div>
 
-    </div>
+    </main>
 
     <script>
         const hamburger = document.getElementById('hamburger');

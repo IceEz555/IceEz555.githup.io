@@ -15,7 +15,7 @@
             <h1 class="site-title">Arsenal Fanpage website</h1>
             <!-- Logo now simply next to text -->
             <div class="logo-box">
-                <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal Logo" title="Arsenal Football Club Logo">
             </div>
             
             <div class="hamburger" id="hamburger">
@@ -36,7 +36,7 @@
         </nav>
     </header>
 
-    <div class="container">
+    <main class="container">
         
         <!-- Introduction Section -->
         <h2 class="page-title">Introduction</h2>
@@ -51,9 +51,15 @@
         <!-- YouTube Video Section -->
         <div class="video-section">
             <h2 class="section-heading mt-0" style="text-align: center; color: var(--arsenal-red); font-family: 'Bebas Neue'; font-size: 2.5rem; margin-top: 40px;">Check This Out!</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/HEOAvZFb_ns?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+            <!-- Changed structure to fix caption visibility -->
+            <figure style="max-width: 1000px; margin: 40px auto; display: block;">
+                <div class="video-container" style="margin: 0; width: 100%;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HEOAvZFb_ns?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display: block; margin: 0 auto;"></iframe>
+                </div>
+                <figcaption style="text-align: center; margin-top: 15px; font-style: italic; color: #333; font-weight: 600; font-size: 1.1rem; display: block;">
+                    Experience the atmosphere of the Emirates Stadium.
+                </figcaption>
+            </figure>
         </div>
 
         <!-- 2x2 Grid Wireframe with Images -->
@@ -111,7 +117,7 @@
             </div>
         </div>
 
-    </div>
+    </main>
 
     <!-- Script -->
     <script>

@@ -31,6 +31,7 @@
             width: 100%;
             border-collapse: collapse;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            caption-side: bottom;
         }
         .achievement-table th {
             background-color: var(--arsenal-red);
@@ -137,7 +138,7 @@
         <div class="header-top">
             <h1 class="site-title">Arsenal Fanpage website</h1>
             <div class="logo-box">
-                <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal Logo" title="Arsenal Football Club Logo">
             </div>
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
@@ -156,7 +157,7 @@
         </nav>
     </header>
 
-    <div class="container achievement-container">
+    <main class="container achievement-container">
         <div class="history-tag">HISTORY</div>
         <h2 class="page-title honours-title">Honours</h2>
 
@@ -183,6 +184,7 @@
                 <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/fa-cup-winners-2020.png?auto=webp&itok=jRh1OpH6" alt="FA Cup 2020" title="2020 FA Cup Winners">
             </div>
             <table class="achievement-table no-border">
+                <caption>FA Cup Finals Record</caption>
                 <tbody>
                     <tr><td class="year-col">2020</td><td>Beat Chelsea 2-1</td></tr>
                     <tr><td class="year-col">2017</td><td>Beat Chelsea 2-1</td></tr>
@@ -210,6 +212,7 @@
                 <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/leaguecup_1993_2.jpg?auto=webp&itok=hXH5eDBC" alt="League Cup 1993" title="1993 League Cup Winners">
             </div>
             <table class="achievement-table no-border">
+                <caption>League Cup Finals Record</caption>
                 <tbody>
                     <tr><td class="year-col">1993</td><td>Beat Sheffield Wednesday 2-1</td></tr>
                     <tr><td class="year-col">1987</td><td>Beat Liverpool 2-1</td></tr>
@@ -224,6 +227,7 @@
                 <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/fairs_cup_mee_0.jpg?auto=webp&itok=GAnzvk1U" alt="Fairs Cup" title="1970 European Fairs Cup Winners">
             </div>
             <table class="achievement-table no-border">
+                <caption>European Fairs Cup Finals Record</caption>
                 <tbody>
                     <tr><td class="year-col">1970</td><td>Beat Anderlecht 4-3 on aggregate</td></tr>
                 </tbody>
@@ -237,6 +241,7 @@
                 <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/cupwinnerscup_1994.jpg?auto=webp&itok=nvMBBf2e" alt="Cup Winners Cup" title="1994 Cup Winners Cup Winners">
             </div>
             <table class="achievement-table no-border">
+                <caption>European Cup Winners Cup Finals Record</caption>
                 <tbody>
                     <tr><td class="year-col">1994</td><td>Beat Parma 1-0 (in Copenhagen)</td></tr>
                 </tbody>
@@ -250,6 +255,7 @@
                 <img src="https://www.arsenal.com/sites/default/files/styles/large/public/images/community-shield-lift-2023.png?auto=webp&itok=VTGQrvwH" alt="Shield 2023" title="2023 Community Shield Winners">
             </div>
             <table class="achievement-table no-border">
+                <caption>Community Shield Finals Record</caption>
                 <tbody>
                     <tr><td class="year-col">2023</td><td>Beat Manchester City 4-1 on pens (after 1-1)</td></tr>
                     <tr><td class="year-col">2020</td><td>Beat Liverpool 5-4 on pens (after 1-1)</td></tr>
@@ -275,7 +281,7 @@
         <p class="copyright-footer">
             Copyright 2026 The Arsenal Football Club Limited. Permission to use quotations from this article is granted subject to appropriate credit being given to www.arsenal.com as the source.
         </p>
-    </div>
+    </main>
 
     <script>
         const hamburger = document.getElementById('hamburger');
